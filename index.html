@@ -107,21 +107,21 @@ function getMaladieName() {
 let nom_maladie = maladies[Math.floor(Math.random() * maladies.length)];
 let nom_creature = creatures[Math.floor(Math.random() * creatures.length)];
 let nom_creature_split = nom_creature.slice(2);
-let pronom = "";
+let determinant = "";
 
 
 switch (nom_creature[0]) {
-   case 'i': pronom = " de l'";
+   case 'i': determinant = " de l'";
    break;
    
-   case 'm': pronom = " du ";
+   case 'm': determinant = " du ";
    break;
    
-   case 'f': pronom = " de la ";
+   case 'f': determinant = " de la ";
    break;
 }
 
-document.getElementById("texte").innerHTML = "<span>" + nom_maladie + pronom +  nom_creature_split + "</span>";
+document.getElementById("texte").innerHTML = "<span>" + nom_maladie + determinant +  nom_creature_split + "</span>";
 
 }
 
