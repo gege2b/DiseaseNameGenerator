@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta charset="utf-8" />
-<title></title>
+<title>Générateur de nom d'épidémie</title>
 <script src="js.js"></script>
 <style type="text/css">
 *,
@@ -24,10 +24,11 @@
    font-size: 1.5em;
    margin-right: auto;
    margin-left: auto;
-   background-color: #FFF;
+   background-color: #EEE;
    text-align: center;
    padding: 20px;
-   border-radius: 20px;   
+   border-radius: 20px;
+   visibility: hidden;
 }
 
 h1 {
@@ -44,6 +45,13 @@ h1 {
    border-radius: 5px;
 }
 
+.description {
+   text-align: center;
+   color: #666;
+   width: 42%;
+   margin-left: auto;
+   margin-right: auto;
+}
 </style>
 </head>
 <script type="text/javascript">
@@ -67,15 +75,16 @@ switch (nom_creature[0]) {
 }
 
 document.getElementById("texte").innerHTML = "<span>" + nom_maladie + determinant +  nom_creature_split + "</span>";
-
+document.getElementById("texte").style.visibility = "visible";
 }
 
 </script>
 <body class="body">
    <h1>Générateur de nom d'épidémie</h1>
+   <p class="description">Cliques sur le bouton et découvre quelle sera le nom de la prochaine épidémie dont tout le monde parlera.</p>
 
    <div style="text-align: center;">
-   <button onclick="getMaladieName();" class="bouton">Découvre le nom de la prochaine épidémie !</button>
+   <button onclick="getMaladieName();" class="bouton">Fais voir !</button>
    </div>
 
    <div id="texte">
